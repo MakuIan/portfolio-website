@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TimeLineElement from "../../components/cv/TimeLine.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={t('cv.title')} sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t('cv.profileTitle')}</div>
+  </div>
+
+  <div class="mb-10 text-justify text-base-content/70 italic border-l-4 border-primary pl-4 py-2 bg-base-200/50 rounded-r">
+    {t('cv.profileDesc')}
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t('cv.experienceTitle')}</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="[ Job Title / Position ]"
+      subtitle="[ Start Date ] - [ End Date ] | [ Company Name / Location ]"
+    >
+      {t('cv.experienceDesc')}
+    </TimeLineElement>
+    <TimeLineElement
+      title="[ Job Title / Position ]"
+      subtitle="[ Start Date ] - [ End Date ] | [ Company Name / Location ]"
+    >
+      {t('cv.experienceDesc')}
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t('cv.educationTitle')}</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="[ Degree / Degree Name ]"
+      subtitle="[ Year ] - [ Year ] | [ University / Institution Name ]"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t('cv.skillsTitle')}</div>
+  </div>
+
+  <div class="mb-10">
+    <p class="text-base-content/70 italic mb-4">{t('cv.skillsDesc')}</p>
+    <ul class="list-disc md:columns-4 columns-2 mx-6 gap-4">
+      <li>SvelteKit / Svelte</li>
+      <li>Convex</li>
+      <li>PostgreSQL</li>
+      <li>TypeScript / JavaScript</li>
+      <li>Astro</li>
+      <li>Tailwind CSS</li>
+      <li>Git / GitHub</li>
+      <li>[ Add Skill ]</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t('cv.certificationsTitle')}</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li class="italic text-base-content/70">
+      {t('cv.certificationsDesc')}
+    </li>
+  </ul>
+</BaseLayout>

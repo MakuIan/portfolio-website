@@ -1,0 +1,59 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+---
+
+<div class="flex items-center gap-1 bg-base-200 p-1 rounded-lg border border-base-300 text-xs font-semibold">
+  {
+    Object.entries(languages).map(([lang]) => {
+      const isActive = lang === currentLang;
+      return (
+        <button
+          type="button"
+          class={`lang-picker-btn px-2 py-1 rounded transition-colors ${
+            isActive ? 'bg-primary text-primary-content shadow-xs font-bold' : 'hover:bg-base-300 text-base-content/70'
+          }`}
+          data-lang={lang}
+        >
+          {lang.toUpperCase()}
+        </button>
+      );
+    })
+  }
+</div>
+
+<script>
+  function setupLanguagePickers() {
+    document.querySelectorAll('[data-lang]').forEach((btn) => {
+      // Update active state based on current URL path
+      const pathLang = window.location.pathname.split('/')[1];
+      const btnLang = (btn as HTMLElement).dataset.lang;
+
+      if (btnLang === pathLang) {
+        btn.classList.add('bg-primary', 'text-primary-content', 'shadow-xs', 'font-bold');
+        btn.classList.remove('hover:bg-base-300', 'text-base-content/70');
+      } else {
+        btn.classList.remove('bg-primary', 'text-primary-content', 'shadow-xs', 'font-bold');
+        btn.classList.add('hover:bg-base-300', 'text-base-content/70');
+      }
+
+      btn.addEventListener('click', () => {
+        const targetLang = (btn as HTMLElement).dataset.lang;
+        if (!targetLang) return;
+
+        // Replace the language segment in the current URL path
+        const pathParts = window.location.pathname.split('/');
+        // pathParts[0] = '', pathParts[1] = current lang, pathParts[2+] = rest of path
+        pathParts[1] = targetLang;
+        const newPath = pathParts.join('/') || `/${targetLang}/`;
+        window.location.href = newPath;
+      });
+    });
+  }
+
+  setupLanguagePickers();
+  document.addEventListener('astro:after-swap', setupLanguagePickers);
+  document.addEventListener('astro:page-load', setupLanguagePickers);
+</script>
