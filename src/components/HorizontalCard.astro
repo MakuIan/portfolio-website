@@ -1,6 +1,7 @@
 ---
 const { title, img, desc, url, github, badge, tags, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
+import { getTagColorClass } from "../lib/tagColors";
 const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "#";
 ---
 
@@ -57,7 +58,7 @@ const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "#";
         tags && (
           <div class="card-actions justify-start mt-2">
             {tags.map((tag) => (
-              <span class="badge badge-outline text-xs">
+              <span class={`badge border text-xs font-medium ${getTagColorClass(tag)}`}>
                 {tag}
               </span>
             ))}
