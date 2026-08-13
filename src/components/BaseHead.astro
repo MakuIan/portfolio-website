@@ -1,16 +1,21 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import '../styles/global.css';
+import "../styles/global.css";
 
 export interface Props {
-	title: string;
-	description: string;
-	image?: string;
-	ogType?: string;
+  title: string;
+  description: string;
+  image?: string;
+  ogType?: string;
 }
 
-const { title, description, image = '/social_img.webp', ogType = 'website' } = Astro.props;
+const {
+  title,
+  description,
+  image = "/social_img.webp",
+  ogType = "website",
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -20,13 +25,17 @@ const { title, description, image = '/social_img.webp', ogType = 'website' } = A
 <meta name="generator" content={Astro.generator} />
 
 <script is:inline>
-  (function() {
+  (function () {
     try {
-      const savedLang = localStorage.getItem('user_lang');
+      const savedLang = localStorage.getItem("user_lang");
       const urlParams = new URLSearchParams(window.location.search);
-      const currentLangParam = urlParams.get('lang');
-      if (savedLang && (savedLang === 'de' || savedLang === 'en') && currentLangParam !== savedLang) {
-        urlParams.set('lang', savedLang);
+      const currentLangParam = urlParams.get("lang");
+      if (
+        savedLang &&
+        (savedLang === "de" || savedLang === "en") &&
+        currentLangParam !== savedLang
+      ) {
+        urlParams.set("lang", savedLang);
         window.location.search = urlParams.toString();
       }
     } catch (e) {}

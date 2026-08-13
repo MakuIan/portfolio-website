@@ -7,16 +7,16 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<BaseLayout title={t('projects.title')} sideBarActiveItemID="projects">
+<BaseLayout title={t("projects.title")} sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">{t('projects.title')}</div>
-    <p class="text-base text-base-content/70 mb-6">{t('projects.subtitle')}</p>
+    <div class="mb-5 w-full text-3xl font-bold">{t("projects.title")}</div>
+    <p class="mb-6 text-base text-base-content/70">{t("projects.subtitle")}</p>
   </div>
 
   <HorizontalCard
     title="step-chef"
     img="/step-chef.png"
-    desc={t('project.stepchef.desc')}
+    desc={t("project.stepchef.desc")}
     url="https://github.com/MakuIan/step-chef"
     github="https://github.com/MakuIan/step-chef"
     badge="Featured"
@@ -26,7 +26,7 @@ const t = useTranslations(lang);
   <HorizontalCard
     title="set-point"
     img="/post_img.webp"
-    desc={t('project.setpoint.desc')}
+    desc={t("project.setpoint.desc")}
     url="https://github.com/MakuIan/set-point"
     github="https://github.com/MakuIan/set-point"
     badge="SportsTech"
@@ -36,7 +36,7 @@ const t = useTranslations(lang);
   <HorizontalCard
     title="NexusFinance"
     img="/post_img.webp"
-    desc={t('project.nexusfinance.desc')}
+    desc={t("project.nexusfinance.desc")}
     url="https://github.com/MakuIan/NexusFinance"
     github="https://github.com/MakuIan/NexusFinance"
     badge="FinTech"

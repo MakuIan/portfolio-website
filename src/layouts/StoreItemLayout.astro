@@ -29,7 +29,14 @@ import { Image } from "astro:assets";
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {
         heroImage && (
-          <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />
+          <Image
+            width={750}
+            height={422}
+            format="webp"
+            src={heroImage}
+            alt={title}
+            class="mb-6 w-full"
+          />
         )
       }
       <div class="">
@@ -39,18 +46,26 @@ import { Image } from "astro:assets";
         </h1>
         <div class="flex place-content-between items-center">
           <div class="grow md:grow-0">
-            <span class="text-xl mr-1"> {pricing}</span>
-            <span class="text-md opacity-50 line-through">{oldPricing}</span>
+            <span class="mr-1 text-xl"> {pricing}</span>
+            <span class="text-md line-through opacity-50">{oldPricing}</span>
           </div>
           <div>
             {
               custom_link && (
-                <a class="btn btn-outline grow md:grow-0 ml-4" href={custom_link} target="_blank">
+                <a
+                  class="btn btn-outline ml-4 grow md:grow-0"
+                  href={custom_link}
+                  target="_blank"
+                >
                   {custom_link_label}
                 </a>
               )
             }
-            <a class="btn btn-primary grow md:grow-0 ml-4" href={checkoutUrl} target="_blank">Buy Now</a>
+            <a
+              class="btn btn-primary ml-4 grow md:grow-0"
+              href={checkoutUrl}
+              target="_blank">Buy Now</a
+            >
           </div>
         </div>
       </div>
