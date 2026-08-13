@@ -21,14 +21,34 @@ const t = useTranslations(lang);
   <div class="card max-w-xl border border-base-200 bg-base-100 p-6 shadow-sm">
     <form
       class="space-y-4"
-      onsubmit="event.preventDefault(); alert('Template form submitted!');"
+      action="https://api.web3forms.com/submit"
+      method="POST"
     >
+      <input
+        type="hidden"
+        name="access_key"
+        value="025a2114-f2ce-4fc4-a044-a4c6bb6fce9f"
+      />
+      <input
+        type="hidden"
+        name="subject"
+        value="New portfolio contact message"
+      />
+      <input
+        type="checkbox"
+        name="botcheck"
+        class="hidden"
+        style="display: none;"
+      />
+
       <div>
         <label class="label font-medium">{t("contact.name")}</label>
         <input
           type="text"
+          name="name"
           placeholder="[ Name ]"
           class="input input-bordered w-full"
+          required
         />
       </div>
 
@@ -36,16 +56,20 @@ const t = useTranslations(lang);
         <label class="label font-medium">{t("contact.email")}</label>
         <input
           type="email"
+          name="email"
           placeholder="[ email@example.com ]"
           class="input input-bordered w-full"
+          required
         />
       </div>
 
       <div>
         <label class="label font-medium">{t("contact.message")}</label>
         <textarea
+          name="message"
           placeholder="[ Message ]"
-          class="textarea textarea-bordered h-32 w-full"></textarea>
+          class="textarea textarea-bordered h-32 w-full"
+          required></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary w-full">
