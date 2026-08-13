@@ -31,6 +31,8 @@ export const TAG_COLORS: Record<string, string> = {
   git: "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/30",
   github:
     "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/30",
+  drizzle:
+    "bg-lime-500/15 text-lime-600 dark:text-lime-400 border-lime-500/30",
 };
 
 export function getTagColorClass(tag: string): string {

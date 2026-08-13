@@ -28,9 +28,9 @@ export const ui = {
     "project.stepchef.desc":
       "Interactive culinary cooking assistant with step-by-step recipe instructions, meal planning, and active cooking session guides.",
     "project.setpoint.desc":
-      "Tennis and sports match tracking application for score management, game breakdown, and real-time player analytics.",
+      "An app I built to track sets and workouts.",
     "project.nexusfinance.desc":
-      "Nexus Finance is an end-to-end wealth management and financial analytics platform. Built on SvelteKit, Drizzle ORM, and PostgreSQL, it pairs a high-performance web interface with an automated Python data pipeline syncing data across 20+ UCITS and Non-UCITS ETF providers. Key capabilities include deep ETF look-through analysis, multi-ETF portfolio replication, automated risk scoring, geographical and sector exposure mapping, and side-by-side asset comparisons.",
+      "Nexus Finance – Full-stack financial analytics dashboard for deep ETF and portfolio analysis.\n\n• Data Pipeline: Python ETL syncing daily holdings across 20+ UCITS & Non-UCITS ETF providers.\n• Analytics: Look-through holding breakdown, multi-ETF replication, geographic/sector exposure mapping, and risk scoring.\n•",
     "cv.title": "CV / Resume",
     "cv.profileTitle": "Profile",
     "cv.profileDesc": "[ Add your personal profile / introduction here ]",
@@ -74,9 +74,9 @@ export const ui = {
     "project.stepchef.desc":
       "Interaktiver Kochassistent mit Schritt-für-Schritt Rezeptanleitungen, Menüplanung und aktiver Kochsessions-Führung.",
     "project.setpoint.desc":
-      "Tennis- und Sport-Match-Tracker zur Spielstandverwaltung, Satz-Analyse und Echtzeit-Statistiken.",
+      "Eine App, die ich gebaut habe um Sets und Workouts zu tracken.",
     "project.nexusfinance.desc":
-      "Persönliches Finanz- und Portfolio-Dashboard mit PostgreSQL-Datenbankanbindung und Finanzanalysen.",
+      "Nexus Finance – Full-Stack-Finanz-Analytics-Dashboard für tiefe ETF- und Portfolio-Analysen.\n\n• Data Pipeline: Python-ETL, das tägliche Holdings über 20+ UCITS- und Non-UCITS-ETF-Anbieter synchronisiert.\n• Analytics: Look-through-Analyse, Multi-ETF-Replikation, geografische/branchenbezogene Exposure-Karten und Risikobewertung.\n•",
 
     "cv.title": "Lebenslauf",
     "cv.profileTitle": "Profil",
