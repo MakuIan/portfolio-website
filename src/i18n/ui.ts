@@ -30,7 +30,7 @@ export const ui = {
     "project.setpoint.desc":
       "An app I built to track sets and workouts.",
     "project.nexusfinance.desc":
-      "Nexus Finance – Full-stack financial analytics dashboard for deep ETF and portfolio analysis.\n\n• Data Pipeline: Python ETL syncing daily holdings across 20+ UCITS & Non-UCITS ETF providers.\n• Analytics: Look-through holding breakdown, multi-ETF replication, geographic/sector exposure mapping, and risk scoring.\n•",
+      "Nexus Finance – Full-stack financial analytics dashboard for deep ETF and portfolio analysis.\n\n• Data Pipeline: Python ETL syncing daily holdings across 20+ UCITS & Non-UCITS ETF providers.\n• Analytics: Look-through holding breakdown, multi-ETF replication, geographic/sector exposure mapping, and risk scoring.\n",
     "cv.title": "CV / Resume",
     "cv.profileTitle": "Profile",
     "cv.profileDesc": "[ Add your personal profile / introduction here ]",
@@ -39,7 +39,7 @@ export const ui = {
     "cv.educationTitle": "Education",
     "cv.educationDesc": "[ Add your educational background here ]",
     "cv.skillsTitle": "Skills",
-    "cv.skillsDesc": "[ Add your technical skills here ]",
+    "cv.skillsDesc": "",
     "cv.certificationsTitle": "Certifications",
     "cv.certificationsDesc": "[ Add your certifications here ]",
 
@@ -76,7 +76,7 @@ export const ui = {
     "project.setpoint.desc":
       "Eine App, die ich gebaut habe um Sets und Workouts zu tracken.",
     "project.nexusfinance.desc":
-      "Nexus Finance – Full-Stack-Finanz-Analytics-Dashboard für tiefe ETF- und Portfolio-Analysen.\n\n• Data Pipeline: Python-ETL, das tägliche Holdings über 20+ UCITS- und Non-UCITS-ETF-Anbieter synchronisiert.\n• Analytics: Look-through-Analyse, Multi-ETF-Replikation, geografische/branchenbezogene Exposure-Karten und Risikobewertung.\n•",
+      "Nexus Finance – Full-Stack-Finanz-Analytics-Dashboard für tiefe ETF- und Portfolio-Analysen.\n\n• Data Pipeline: Python-ETL, das tägliche Holdings über 20+ UCITS- und Non-UCITS-ETF-Anbieter synchronisiert.\n• Analytics: Look-through-Analyse, Multi-ETF-Replikation, geografische/branchenbezogene Exposure-Karten und Risikobewertung.\n",
 
     "cv.title": "Lebenslauf",
     "cv.profileTitle": "Profil",
@@ -88,7 +88,7 @@ export const ui = {
     "cv.educationTitle": "Ausbildung",
     "cv.educationDesc": "[ Füge hier deine Ausbildung / dein Studium hinzu ]",
     "cv.skillsTitle": "Fähigkeiten",
-    "cv.skillsDesc": "[ Füge hier deine technischen Fähigkeiten hinzu ]",
+    "cv.skillsDesc": "",
     "cv.certificationsTitle": "Zertifikate",
     "cv.certificationsDesc": "[ Füge hier deine Zertifikate hinzu ]",
 

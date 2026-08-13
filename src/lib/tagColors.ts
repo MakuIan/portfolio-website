@@ -33,6 +33,10 @@ export const TAG_COLORS: Record<string, string> = {
     "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/30",
   drizzle:
     "bg-lime-500/15 text-lime-600 dark:text-lime-400 border-lime-500/30",
+  betterauth:
+    "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+  "better auth":
+    "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
 };
 
 export function getTagColorClass(tag: string): string {

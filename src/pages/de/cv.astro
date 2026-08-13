@@ -18,24 +18,26 @@ const t = useTranslations(lang);
     {t("cv.profileDesc")}
   </div>
 
-  <div class="mb-5">
+  <!-- <div class="mb-5">
     <div class="w-full text-3xl font-bold">{t("cv.experienceTitle")}</div>
   </div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="[ Berufsbezeichnung / Position ]"
-      subtitle="[ Startdatum ] - [ Enddatum ] | [ Unternehmen / Ort ]"
-    >
+      title="[ Job Title / Position ]"
+      subtitle="[ Start Date ] - [ End Date ] | [ Company Name / Location ]"
+      >≤˚
       {t("cv.experienceDesc")}
     </TimeLineElement>
     <TimeLineElement
-      title="[ Berufsbezeichnung / Position ]"
-      subtitle="[ Startdatum ] - [ Enddatum ] | [ Unternehmen / Ort ]"
+      title="[ Job Title / Position ]"
+      subtitle="[ Start Date ] - [ End Date ] | [ Company Name / Location ]"
     >
       {t("cv.experienceDesc")}
     </TimeLineElement>
-  </div>
+  </div> -->
+
+  <div class="time-line-container mb-10" aria-hidden="true"></div>
 
   <div class="mb-5">
     <div class="w-full text-3xl font-bold">{t("cv.educationTitle")}</div>
@@ -43,8 +45,8 @@ const t = useTranslations(lang);
 
   <div class="time-line-container mb-10 grid gap-4">
     <TimeLineElement
-      title="[ Abschluss / Studiengang ]"
-      subtitle="[ Jahr ] - [ Jahr ] | [ Universität / Institution ]"
+      title="Abitur"
+      subtitle="2018 - 2023 | Martin-Niemöller-Schule, Wiesbaden"
     />
   </div>
 
@@ -53,7 +55,11 @@ const t = useTranslations(lang);
   </div>
 
   <div class="mb-10">
-    <p class="mb-4 italic text-base-content/70">{t("cv.skillsDesc")}</p>
+    {
+      t("cv.skillsDesc") && (
+        <p class="mb-4 italic text-base-content/70">{t("cv.skillsDesc")}</p>
+      )
+    }
     <ul class="mx-6 list-disc columns-2 gap-4 md:columns-4">
       <li>SvelteKit / Svelte</li>
       <li>Convex</li>
@@ -62,7 +68,6 @@ const t = useTranslations(lang);
       <li>Astro</li>
       <li>Tailwind CSS</li>
       <li>Git / GitHub</li>
-      <li>[ Fähigkeit hinzufügen ]</li>
     </ul>
   </div>
 
