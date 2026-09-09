@@ -1,7 +1,18 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 import { getTagColorClass } from "../lib/tagColors";
+
+interface Props {
+  title: string;
+  img: string;
+  desc: string;
+  url: string;
+  badge?: string;
+  tags?: string[];
+  target?: string;
+}
+
+const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 ---
 
 <div class="w-full md:w-1/3">

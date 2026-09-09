@@ -1,12 +1,15 @@
 ---
+import { Image } from "astro:assets";
+import { getTagColorClass } from "../lib/tagColors";
+
 interface Props {
   title: string;
   img: string;
   desc: string;
   url: string;
-  github: string;
-  badge: string;
-  tags: string[];
+  github?: string;
+  badge?: string;
+  tags?: string[];
   target?: string;
 }
 
@@ -20,8 +23,6 @@ const {
   tags,
   target = "_blank",
 } = Astro.props;
-import { Image } from "astro:assets";
-import { getTagColorClass } from "../lib/tagColors";
 const tag_url = url ? url.split("/").slice(0, -1).join("/") + "/tag" : "#";
 ---
 
