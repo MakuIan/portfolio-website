@@ -43,6 +43,10 @@ const t = useTranslations(lang);
 
   <div class="time-line-container mb-10 grid gap-4">
     <TimeLineElement
+      title="B.Sc. Computer Science"
+      subtitle="2023 - Present | Goethe University Frankfurt"
+    />
+    <TimeLineElement
       title="Abitur"
       subtitle="2018 - 2023 | Martin-Niemöller-Schule, Wiesbaden"
     />
@@ -58,7 +62,7 @@ const t = useTranslations(lang);
         <p class="mb-4 italic text-base-content/70">{t("cv.skillsDesc")}</p>
       )
     }
-    <ul class="mx-6 list-disc columns-2 gap-4 md:columns-4">
+    <ul class="grid grid-cols-2 gap-x-8 gap-y-2 sm:grid-cols-3 lg:grid-cols-4 list-disc list-inside">
       <li>SvelteKit / Svelte</li>
       <li>Convex</li>
       <li>PostgreSQL</li>

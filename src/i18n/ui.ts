@@ -25,10 +25,13 @@ export const ui = {
     "projects.viewGithub": "GitHub",
     "projects.viewAll": "View All Projects",
 
+    "project.stepchef.badge": "Culinary",
     "project.stepchef.desc":
       "Interactive culinary cooking assistant with step-by-step recipe instructions, meal planning, and active cooking session guides.",
+    "project.setpoint.badge": "Fitness",
     "project.setpoint.desc":
       "An app I built to track sets and workouts.",
+    "project.nexusfinance.badge": "Finance",
     "project.nexusfinance.desc":
       "Nexus Finance – Full-stack financial analytics dashboard for deep ETF and portfolio analysis.\n\n• Data Pipeline: Python ETL syncing daily holdings across 20+ UCITS & Non-UCITS ETF providers.\n• Analytics: Look-through holding breakdown, multi-ETF replication, geographic/sector exposure mapping, and risk scoring.\n",
     "cv.title": "CV / Resume",
@@ -60,7 +63,7 @@ export const ui = {
 
     "hero.greeting": "Hallo 👋",
     "hero.title": "Software-Entwickler",
-    "hero.subtitle": "Full-Stack Webanwendungen & Moderne Software",
+    "hero.subtitle": "Full-Stack- & Webentwicklung",
     "hero.desc":
       "Entwicklung moderner Webanwendungen wie step-chef, set-point und NexusFinance.",
     "hero.connect": "Kontakt aufnehmen",
@@ -71,10 +74,13 @@ export const ui = {
     "projects.viewGithub": "GitHub",
     "projects.viewAll": "Alle Projekte anzeigen",
 
+    "project.stepchef.badge": "Kulinarik",
     "project.stepchef.desc":
       "Interaktiver Kochassistent mit Schritt-für-Schritt Rezeptanleitungen, Menüplanung und aktiver Kochsessions-Führung.",
+    "project.setpoint.badge": "Fitness",
     "project.setpoint.desc":
       "Eine App, die ich gebaut habe um Sets und Workouts zu tracken.",
+    "project.nexusfinance.badge": "Finanzen",
     "project.nexusfinance.desc":
       "Nexus Finance – Full-Stack-Finanz-Analytics-Dashboard für tiefe ETF- und Portfolio-Analysen.\n\n• Data Pipeline: Python-ETL, das tägliche Holdings über 20+ UCITS- und Non-UCITS-ETF-Anbieter synchronisiert.\n• Analytics: Look-through-Analyse, Multi-ETF-Replikation, geografische/branchenbezogene Exposure-Karten und Risikobewertung.\n",
 

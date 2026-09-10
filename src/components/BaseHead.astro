@@ -24,23 +24,6 @@ const {
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
-<script is:inline>
-  (function () {
-    try {
-      const savedLang = localStorage.getItem("user_lang");
-      const urlParams = new URLSearchParams(window.location.search);
-      const currentLangParam = urlParams.get("lang");
-      if (
-        savedLang &&
-        (savedLang === "de" || savedLang === "en") &&
-        currentLangParam !== savedLang
-      ) {
-        urlParams.set("lang", savedLang);
-        window.location.search = urlParams.toString();
-      }
-    } catch (e) {}
-  })();
-</script>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>

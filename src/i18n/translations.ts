@@ -50,7 +50,7 @@ export const translations = {
 
     "hero.greeting": "Hallo 👋",
     "hero.title": "Software-Entwickler",
-    "hero.subtitle": "Full-Stack Webanwendungen & Moderne Software",
+    "hero.subtitle": "Full-Stack- & Webentwicklung",
     "hero.desc":
       "Entwicklung von Projekten wie step-chef, set-point und NexusFinance.",
     "hero.connect": "Kontakt aufnehmen",
