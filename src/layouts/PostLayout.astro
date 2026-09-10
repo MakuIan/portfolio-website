@@ -24,7 +24,6 @@ const displayDate = dayjs(pubDate).format("ll");
   title={title}
   description={description}
   image={heroImage}
-  ,
   ogType="article"
 >
   <main class="md:flex md:justify-center">
@@ -37,6 +36,7 @@ const displayDate = dayjs(pubDate).format("ll");
             format="webp"
             src={heroImage}
             alt={title}
+            loading="eager"
             class="mb-6 w-full"
           />
         )

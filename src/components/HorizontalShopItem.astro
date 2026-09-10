@@ -1,6 +1,17 @@
 ---
 import { Image } from "astro:assets";
 
+interface Props {
+  title: string;
+  img: string;
+  desc: string;
+  url: string;
+  badge?: string;
+  pricing?: string;
+  oldPricing?: string;
+  loading?: "eager" | "lazy";
+}
+
 const {
   title,
   img,
@@ -9,10 +20,7 @@ const {
   badge,
   pricing,
   oldPricing,
-  checkoutUrl,
-  details = true,
-  custom_link = false,
-  custom_link_label = "",
+  loading = "lazy",
 } = Astro.props;
 ---
 
@@ -29,6 +37,7 @@ const {
             format="webp"
             src={img}
             alt={title}
+            loading={loading}
             class="max-w-full rounded-lg md:max-w-[13rem]"
           />
         )

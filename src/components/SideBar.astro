@@ -9,7 +9,10 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <div class="drawer-side z-40">
-  <label for="my-drawer" class="drawer-overlay"></label>
+  <label
+    for="my-drawer"
+    class="drawer-overlay"
+    aria-label="Close navigation menu"></label>
   <aside
     class="flex h-auto min-h-full w-[19rem] flex-col bg-base-200 px-2 pt-2 text-base-content"
   >
@@ -25,7 +28,8 @@ const lang = getLangFromUrl(Astro.url);
               width={300}
               height={300}
               src="/profile.webp"
-              alt="Profile image"
+              alt="Mark Ian Braun"
+              loading="eager"
             />
           </div>
         </div>
