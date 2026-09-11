@@ -45,7 +45,6 @@ const t = useTranslations(lang);
   <div>
     <div class="mb-5 w-full text-3xl font-bold">
       {t("projects.title")}
-      {"</"}{" >"}
     </div>
   </div>
 
@@ -55,6 +54,8 @@ const t = useTranslations(lang);
     desc={t("project.nexusfinance.desc")}
     url="https://nexusfinanceterminal.de/"
     github="https://github.com/MakuIan/NexusFinance"
+    detailsUrl={`/${lang}/projects/nexusfinance`}
+    detailsLabel={t("projects.caseStudy")}
     badge={t("project.nexusfinance.badge")}
     loading="eager"
     tags={[

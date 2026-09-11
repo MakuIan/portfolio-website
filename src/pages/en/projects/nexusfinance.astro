@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ProjectCaseStudy from "../../../components/projects/ProjectCaseStudy.astro";
+import { nexusStudyContent } from "../../../i18n/projects/nexusfinance";
+import { getLangFromUrl } from "../../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const content = nexusStudyContent[lang] || nexusStudyContent.en;
+
+const tags = [
+  "SvelteKit",
+  "BetterAuth",
+  "Drizzle ORM",
+  "PostgreSQL",
+  "Docker",
+  "Python",
+  "ETL Pipelines",
+  "Yahoo Finance",
+];
+---
+
+<BaseLayout
+  title="NexusFinance Case Study | Financial Terminal & Portfolio Analytics"
+  description="Full-stack financial terminal for deep equity, ETF, and custom portfolio analytics powered by automated Python ETL pipelines, SvelteKit, and PostgreSQL."
+  sideBarActiveItemID="projects"
+>
+  <ProjectCaseStudy
+    lang={lang}
+    content={content}
+    tags={tags}
+    liveUrl="https://nexusfinanceterminal.de/"
+    githubUrl="https://github.com/MakuIan/NexusFinance"
+  />
+</BaseLayout>

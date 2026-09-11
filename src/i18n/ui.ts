@@ -24,6 +24,10 @@ export const ui = {
     "projects.subtitle": "Selected work and web applications",
     "projects.viewGithub": "GitHub",
     "projects.viewAll": "View All Projects",
+    "projects.caseStudy": "Case Study",
+    "projects.backToProjects": "Back to Projects",
+    "projects.liveDemo": "Live Terminal",
+    "projects.githubRepo": "Source Code",
 
     "project.stepchef.badge": "Culinary",
     "project.stepchef.desc":
@@ -33,7 +37,7 @@ export const ui = {
       "An app I built to track sets and workouts.",
     "project.nexusfinance.badge": "Finance",
     "project.nexusfinance.desc":
-      "Nexus Finance – Full-stack financial analytics dashboard for deep ETF and portfolio analysis.\n\n• Data Pipeline: Python ETL syncing daily holdings across 20+ UCITS & Non-UCITS ETF providers.\n• Analytics: Look-through holding breakdown, multi-ETF replication, geographic/sector exposure mapping, and risk scoring.\n",
+      "Full-stack financial terminal for deep equity, ETF, and custom portfolio analytics.\n\n• Automated Data Pipelines: Weekly ETL scraping of ETF holdings (20+ providers & justETF) and daily market updates via Yahoo Finance using Python cron jobs & PostgreSQL.\n• Deep Analytics & Look-Through: Asset detail pages with interactive charts, financial valuation ratios, risk metrics, and ETF inclusion tracking.\n• Portfolio Engine & ETF Replication: Live weighted portfolio analytics (valuations, growth, geo/sector exposure) and algorithmic matching to replicate custom portfolios with ETFs.\n• Screener & Benchmarking: Side-by-side asset comparisons and real-time watchlists.",
     "cv.title": "CV / Resume",
     "cv.profileTitle": "Profile",
     "cv.profileDesc": "[ Add your personal profile / introduction here ]",
@@ -73,6 +77,10 @@ export const ui = {
     "projects.subtitle": "Moderne Anwendungen und Softwareprojekte",
     "projects.viewGithub": "GitHub",
     "projects.viewAll": "Alle Projekte anzeigen",
+    "projects.caseStudy": "Case Study",
+    "projects.backToProjects": "Zurück zu Projekten",
+    "projects.liveDemo": "Live Terminal",
+    "projects.githubRepo": "Quellcode",
 
     "project.stepchef.badge": "Kulinarik",
     "project.stepchef.desc":
@@ -82,7 +90,7 @@ export const ui = {
       "Eine App, die ich gebaut habe um Sets und Workouts zu tracken.",
     "project.nexusfinance.badge": "Finanzen",
     "project.nexusfinance.desc":
-      "Nexus Finance – Full-Stack-Finanz-Analytics-Dashboard für tiefe ETF- und Portfolio-Analysen.\n\n• Data Pipeline: Python-ETL, das tägliche Holdings über 20+ UCITS- und Non-UCITS-ETF-Anbieter synchronisiert.\n• Analytics: Look-through-Analyse, Multi-ETF-Replikation, geografische/branchenbezogene Exposure-Karten und Risikobewertung.\n",
+      "Full-Stack-Finanzterminal zur professionellen Analyse von Aktien, ETFs und individuellen Portfolios.\n\n• Automatisierte Data-Pipelines: Wöchentliches ETL-Scraping von ETF-Holdings (20+ Provider & justETF) sowie tägliche Marktdaten-Updates via Yahoo Finance mit Python-Cronjobs & PostgreSQL.\n• Tiefenanalyse & Look-Through: Detailseiten mit interaktiven Preischarts, Finanzkennzahlen, Bewertungen, Risikometriken und ETF-Inclusion-Tracking (welche ETFs halten eine Aktie).\n• Portfolio-Engine & ETF-Synthese: Live-Berechnung gewichteter Bewertungen, Wachstums- und Sektor-Verteilungen sowie algorithmische Replikation des Portfolios über passende ETFs.\n• Screener & Benchmark: Multi-Asset-Vergleichsseiten und Watchlists für fundierte Investment-Entscheidungen.",
 
     "cv.title": "Lebenslauf",
     "cv.profileTitle": "Profil",

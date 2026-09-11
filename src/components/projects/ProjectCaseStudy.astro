@@ -1,0 +1,497 @@
+---
+import { getTagColorClass } from "../../lib/tagColors";
+import type { CaseStudyLocale } from "../../types/caseStudy";
+
+interface Props {
+  lang: "en" | "de";
+  content: CaseStudyLocale;
+  tags?: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+}
+
+const {
+  lang,
+  content,
+  tags = [],
+  liveUrl,
+  githubUrl,
+} = Astro.props;
+
+// Preset color rotation for highlight cards if none is provided
+const defaultHighlightColors = [
+  "text-primary",
+  "text-secondary",
+  "text-accent",
+  "text-info",
+];
+---
+
+<div class="space-y-10">
+  <!-- DaisyUI Breadcrumbs Navigation -->
+  <div class="breadcrumbs text-sm">
+    <ul>
+      <li>
+        <a href={`/${lang}/projects`} class="gap-1.5 font-medium">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+          {content.breadcrumb.backToProjects}
+        </a>
+      </li>
+      <li class="font-semibold text-base-content">{content.hero.title}</li>
+    </ul>
+  </div>
+
+  <!-- Hero Header -->
+  <header class="space-y-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="badge badge-secondary font-semibold uppercase tracking-wider text-xs">
+        {content.hero.badge}
+      </span>
+      {
+        content.hero.productionBadge && (
+          <span class="badge badge-outline text-xs">
+            {content.hero.productionBadge}
+          </span>
+        )
+      }
+    </div>
+
+    <h1 class="text-4xl font-extrabold tracking-tight md:text-5xl text-base-content">
+      {content.hero.title}
+    </h1>
+
+    <p class="text-xl text-base-content/80 max-w-3xl leading-relaxed">
+      {content.hero.subtitle}
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-wrap items-center gap-4 pt-2">
+      {
+        liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary gap-2 shadow-sm font-medium"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm7.93 9h-3.064A15.56 15.56 0 0 0 14.8 5.2 8.026 8.026 0 0 1 19.93 11ZM12 4.07A13.462 13.462 0 0 1 13.86 11H10.14A13.462 13.462 0 0 1 12 4.07ZM4.07 13h3.064A15.56 15.56 0 0 0 9.2 18.8 8.026 8.026 0 0 1 4.07 13Zm3.064-2H4.07a8.026 8.026 0 0 1 5.13-6.8A15.56 15.56 0 0 0 9.2 11Zm2.879 8.93A13.462 13.462 0 0 1 10.14 13h3.72a13.462 13.462 0 0 1-1.86 7.93ZM19.93 13h-3.064A15.56 15.56 0 0 0 14.8 18.8 8.026 8.026 0 0 1 19.93 13Zm-9.9-2h7.94a13.847 13.847 0 0 1-.77 4.82A13.541 13.541 0 0 1 10.03 11Zm0-2A13.541 13.541 0 0 1 13.97 13H10.03A13.847 13.847 0 0 1 9.26 9.18Z" />
+            </svg>
+            {content.hero.liveTerminalBtn || "Live Demo"}
+          </a>
+        )
+      }
+
+      {
+        githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline gap-2 font-medium"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            {content.hero.githubBtn || "GitHub"}
+          </a>
+        )
+      }
+    </div>
+
+    <!-- Tech Stack Tags -->
+    {
+      tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 pt-2">
+          {tags.map((tag) => (
+            <span
+              class={`badge border text-xs font-medium py-3 px-3 ${getTagColorClass(tag)}`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )
+    }
+  </header>
+
+  <!-- DaisyUI Divider -->
+  <div class="divider my-4"></div>
+
+  <!-- Section 1: Quick Highlights -->
+  {
+    content.quickHighlights && content.quickHighlights.length > 0 && (
+      <section class={`grid grid-cols-1 md:grid-cols-${Math.min(content.quickHighlights.length, 3)} gap-6`}>
+        {content.quickHighlights.map((highlight, idx) => {
+          const colorClass =
+            highlight.colorClass ||
+            defaultHighlightColors[idx % defaultHighlightColors.length];
+
+          return (
+            <div class="card card-bordered bg-base-200/50 shadow-sm">
+              <div class="card-body p-6 gap-2">
+                <h2 class={`card-title text-base font-bold flex items-center gap-2 ${colorClass}`}>
+                  {highlight.icon ? (
+                    <span class="text-lg">{highlight.icon}</span>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 2v20" />
+                      <path d="m17 5-5-3-5 3" />
+                      <path d="m17 19-5 3-5-3" />
+                    </svg>
+                  )}
+                  {highlight.title}
+                </h2>
+                <p class="text-sm text-base-content/80 leading-relaxed">
+                  {highlight.desc}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </section>
+    )
+  }
+
+  <!-- Section 2: Interactive Showcase Cockpit -->
+  <section class="space-y-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-2">
+      <div>
+        <h2 class="text-2xl font-bold text-base-content mb-1 flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+            <circle cx="9" cy="9" r="2" />
+            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+          </svg>
+          {content.gallery.title}
+        </h2>
+        <p class="text-base-content/70">
+          {content.gallery.subtitle}
+        </p>
+      </div>
+    </div>
+
+    <!-- Unified Showcase Cockpit Container -->
+    <div class="card card-bordered bg-base-100 shadow-md border-base-300 overflow-hidden">
+      <!-- Cockpit Tab Bar (Horizontally scrollable with smooth scroll) -->
+      <div class="bg-base-200/80 border-b border-base-300 p-2.5 overflow-x-auto scrollbar-thin">
+        <div class="flex items-center gap-1.5 min-w-max" role="tablist" id="cockpit-nav-list">
+          {content.gallery.items.map((item, idx) => (
+            <button
+              type="button"
+              class={`btn btn-sm cockpit-nav-btn ${
+                idx === 0
+                  ? "btn-primary !text-white shadow-sm"
+                  : "btn-ghost text-base-content/70 hover:text-base-content hover:bg-base-300/60"
+              }`}
+              data-item-id={item.id}
+            >
+              <span class="opacity-70 font-mono text-xs">{String(idx + 1).padStart(2, "0")}</span>
+              <span class="font-medium">{item.badge}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Feature Panels -->
+      <div class="p-6 md:p-8">
+        {content.gallery.items.map((item, idx) => (
+          <div
+            id={`cockpit-panel-${item.id}`}
+            class={`cockpit-panel space-y-6 ${idx === 0 ? "block" : "hidden"}`}
+          >
+            <!-- Header for Active Feature -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-base-200">
+              <div class="space-y-1">
+                <span class="badge badge-outline badge-secondary badge-sm font-semibold">
+                  {item.badge}
+                </span>
+                <h3 class="text-2xl font-extrabold text-base-content tracking-tight">
+                  {item.title}
+                </h3>
+              </div>
+              <span class="badge badge-ghost font-mono text-xs">
+                {lang === "de" ? "Ansicht" : "View"} {String(idx + 1).padStart(2, "0")} / {String(content.gallery.items.length).padStart(2, "0")}
+              </span>
+            </div>
+
+            <!-- Description -->
+            <p class="text-base text-base-content/80 leading-relaxed max-w-4xl">
+              {item.desc}
+            </p>
+
+            <!-- Key Points Highlights -->
+            {item.keyPoints && item.keyPoints.length > 0 && (
+              <div class="flex flex-wrap gap-2 pt-1">
+                {item.keyPoints.map((point) => (
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-base-200/80 text-base-content border border-base-300">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="13"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-primary shrink-0"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    {point}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <!-- Optional Sub-Tab Switcher -->
+            {item.tabs && item.tabs.length > 0 && (
+              <div class="flex flex-wrap items-center justify-between gap-3 bg-base-200/60 p-2.5 rounded-lg border border-base-300">
+                <div class="text-xs font-semibold uppercase tracking-wider text-base-content/70 flex items-center gap-1.5 pl-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                    <line x1="3" x2="21" y1="9" y2="9" />
+                    <line x1="9" x2="9" y1="21" y2="9" />
+                  </svg>
+                  {item.switchLabel || (lang === "de" ? "Ansicht:" : "View:")}
+                </div>
+                <div class="join" role="tablist">
+                  {item.tabs.map((tab, tabIdx) => (
+                    <button
+                      type="button"
+                      class={`btn btn-sm join-item dashboard-tab-btn ${
+                        tabIdx === 0
+                          ? "btn-primary !text-white shadow-sm"
+                          : "btn-ghost text-base-content/70 hover:text-base-content hover:bg-base-300/60"
+                      }`}
+                      data-target-item={item.id}
+                      data-img={tab.img}
+                      data-alt={tab.alt}
+                      data-url={tab.urlPath}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <!-- Clean image container -->
+            <div class="overflow-hidden rounded-xl border border-base-300 bg-base-100 shadow-sm flex justify-center">
+              <img
+                id={`${item.id}-img`}
+                src={item.img}
+                alt={item.alt}
+                loading={idx === 0 ? "eager" : "lazy"}
+                class="w-full h-auto object-cover max-h-[620px] transition-opacity duration-150"
+                onerror={`this.onerror=null; this.src='${item.fallbackImg || item.img}';`}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom DaisyUI Divider -->
+  <div class="divider my-4"></div>
+
+  <!-- Bottom CTA Footer -->
+  <footer class="flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href={`/${lang}/projects`} class="btn btn-ghost gap-2">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m15 18-6-6 6-6" />
+      </svg>
+      {content.footer.backToAllProjects}
+    </a>
+
+    <div class="flex items-center gap-3">
+      {
+        githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline btn-sm gap-2"
+          >
+            {content.footer.githubBtn || "GitHub"}
+          </a>
+        )
+      }
+      {
+        liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-sm gap-2"
+          >
+            {content.footer.liveTerminalBtn || "Live Demo"}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        )
+      }
+    </div>
+  </footer>
+</div>
+
+<script>
+  function setupCockpit() {
+    const navButtons = document.querySelectorAll<HTMLButtonElement>(".cockpit-nav-btn");
+    navButtons.forEach((btn) => {
+      if (btn.dataset.cockpitInitialized === "true") return;
+      btn.dataset.cockpitInitialized = "true";
+
+      btn.addEventListener("click", () => {
+        const targetId = btn.dataset.itemId;
+        if (!targetId) return;
+
+        // update active classes on cockpit nav buttons
+        navButtons.forEach((b) => {
+          b.classList.remove("btn-primary", "!text-white", "shadow-sm");
+          b.classList.add("btn-ghost", "text-base-content/70", "hover:text-base-content", "hover:bg-base-300/60");
+        });
+        btn.classList.remove("btn-ghost", "text-base-content/70", "hover:text-base-content", "hover:bg-base-300/60");
+        btn.classList.add("btn-primary", "!text-white", "shadow-sm");
+
+        // hide all cockpit panels, show target panel
+        const panels = document.querySelectorAll<HTMLDivElement>(".cockpit-panel");
+        panels.forEach((p) => {
+          if (p.id === `cockpit-panel-${targetId}`) {
+            p.classList.remove("hidden");
+            p.classList.add("block");
+          } else {
+            p.classList.remove("block");
+            p.classList.add("hidden");
+          }
+        });
+      });
+    });
+  }
+
+  function setupTabSwitchers() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>(".dashboard-tab-btn");
+    buttons.forEach((btn) => {
+      if (btn.dataset.initialized === "true") return;
+      btn.dataset.initialized = "true";
+
+      btn.addEventListener("click", () => {
+        const itemId = btn.dataset.targetItem;
+        const newImg = btn.dataset.img;
+        const newAlt = btn.dataset.alt;
+
+        if (!itemId || !newImg) return;
+
+        // update active classes among siblings
+        const siblingBtns = document.querySelectorAll<HTMLButtonElement>(
+          `.dashboard-tab-btn[data-target-item="${itemId}"]`
+        );
+        siblingBtns.forEach((b) => {
+          b.classList.remove("btn-primary", "!text-white", "shadow-sm");
+          b.classList.add("btn-ghost", "text-base-content/70", "hover:text-base-content", "hover:bg-base-300/60");
+        });
+        btn.classList.remove("btn-ghost", "text-base-content/70", "hover:text-base-content", "hover:bg-base-300/60");
+        btn.classList.add("btn-primary", "!text-white", "shadow-sm");
+
+        // smoothly swap image
+        const imgEl = document.getElementById(`${itemId}-img`) as HTMLImageElement | null;
+
+        if (imgEl) {
+          imgEl.style.opacity = "0.2";
+          setTimeout(() => {
+            imgEl.src = newImg;
+            if (newAlt) imgEl.alt = newAlt;
+            imgEl.style.opacity = "1";
+          }, 120);
+        }
+      });
+    });
+  }
+
+  function initAll() {
+    setupCockpit();
+    setupTabSwitchers();
+  }
+
+  initAll();
+  document.addEventListener("astro:page-load", initAll);
+</script>
