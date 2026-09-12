@@ -60,6 +60,37 @@ export const nexusStudyContent: Record<"de" | "en", CaseStudyLocale> = {
         "Screenshots und Analysetools im Überblick: Von Screenings und Fundamentaldaten über ETF-Look-Through bis hin zu Risikomodellen, Portfolios und Asset-Vergleichen.",
       items: [
         {
+          id: "dashboard",
+          badge: "Dashboard",
+          title: "Dashboard & Live-Newsfeed",
+          desc: "Automatisiertes Markt-Briefing via Groq-LLM, das aktuelle Performance-Daten und Yahoo-Finance-News analysiert, um Sentiment, regionale Index-Entwicklungen (Welt, USA, Europa) und Sektortrends prägnant zusammenzufassen. Ergänzt durch Schnellzugriffe auf alle Terminalbereiche und ein Top-Performer-Widget nach Marktkapitalisierung. Darunter liefert eine nach Regionen filterbare News-Sektion Finanznachrichten neben einem Live-Ticker, der Tweets von Walter Bloomberg über eine SSE-Verbindung (Server-Sent Events) aus einem Telegram-Feed in Echtzeit streamt – inklusive getaggter Ticker-Symbole.",
+          img: "/projects/nexusfinance/dashboard_overview.png",
+          alt: "NexusFinance Dashboard und Live-Newsfeed",
+          switchLabel: "Dashboard-Bereich:",
+          keyPoints: [
+            "Groq-gestütztes Markt-Briefing aus Yahoo-Finance-News & Performance-Daten",
+            "Sentiment & regionale Indizes auf einen Blick (Welt, USA, Europa)",
+            "Top-Performer nach Marktkapitalisierung (Mega bis Small Cap)",
+            "Echtzeit-SSE-Feed für Walter Bloomberg Tweets via Telegram",
+          ],
+          tabs: [
+            {
+              id: "dashboard-overview",
+              label: "Übersicht & Markt-Briefing",
+              urlPath: "https://nexusfinanceterminal.de/",
+              img: "/projects/nexusfinance/dashboard_overview.png",
+              alt: "NexusFinance Dashboard Übersicht und Markt-Briefing",
+            },
+            {
+              id: "dashboard-news",
+              label: "Market News & Walter Bloomberg Live-Feed",
+              urlPath: "https://nexusfinanceterminal.de/",
+              img: "/projects/nexusfinance/dashboard_news_feed.png",
+              alt: "NexusFinance Market News und Walter Bloomberg SSE Live Feed",
+            },
+          ],
+        },
+        {
           id: "screener",
           badge: "Screener & Filter",
           title: "Asset-Screener & Interaktive Filter-Dialoge",
@@ -323,6 +354,37 @@ export const nexusStudyContent: Record<"de" | "en", CaseStudyLocale> = {
       subtitle:
         "Visual walkthrough of terminal tools: from screening tables and financial statements to ETF look-through, risk analytics, custom portfolios, and asset comparisons.",
       items: [
+        {
+          id: "dashboard",
+          badge: "Dashboard",
+          title: "Dashboard & Real-Time News Feed",
+          desc: "Automated market briefing powered by Groq LLM inference, analyzing real-time performance metrics and Yahoo Finance news to summarize market sentiment, regional index moves (World, US, Europe), and sector trends. Paired with quick-access links and a top performers widget filtered by market cap. Below, a region-filtered news feed displays financial headlines alongside a real-time ticker streaming Walter Bloomberg tweets via Server-Sent Events (SSE) from a Telegram feed – complete with tagged stock tickers.",
+          img: "/projects/nexusfinance/dashboard_overview.png",
+          alt: "NexusFinance Dashboard and Real-Time News Feed",
+          switchLabel: "Dashboard Area:",
+          keyPoints: [
+            "Groq-powered market briefing from Yahoo Finance news & performance metrics",
+            "Sentiment & regional indices at a glance (World, US, Europe)",
+            "Top gainers & losers filtered by market cap",
+            "Real-time SSE feed streaming Walter Bloomberg tweets via Telegram",
+          ],
+          tabs: [
+            {
+              id: "dashboard-overview",
+              label: "Overview & Market Briefing",
+              urlPath: "https://nexusfinanceterminal.de/",
+              img: "/projects/nexusfinance/dashboard_overview.png",
+              alt: "NexusFinance Dashboard Overview and Market Briefing",
+            },
+            {
+              id: "dashboard-news",
+              label: "Market News & Walter Bloomberg Live Feed",
+              urlPath: "https://nexusfinanceterminal.de/",
+              img: "/projects/nexusfinance/dashboard_news_feed.png",
+              alt: "NexusFinance Market News and Walter Bloomberg SSE Live Feed",
+            },
+          ],
+        },
         {
           id: "screener",
           badge: "Screeners & Filters",
