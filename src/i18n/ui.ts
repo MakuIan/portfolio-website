@@ -37,7 +37,7 @@ export const ui = {
       "An app I built to track sets and workouts.",
     "project.nexusfinance.badge": "Finance",
     "project.nexusfinance.desc":
-      "Full-stack financial terminal for deep equity, ETF, and custom portfolio analytics.\n\n• Automated Data Pipelines: Weekly ETL scraping of ETF holdings (20+ providers & justETF) and daily market updates via Yahoo Finance using Python cron jobs & PostgreSQL.\n• Deep Analytics & Look-Through: Asset detail pages with interactive charts, financial valuation ratios, risk metrics, and ETF inclusion tracking.\n• Portfolio Engine & ETF Replication: Live weighted portfolio analytics (valuations, growth, geo/sector exposure) and algorithmic matching to replicate custom portfolios with ETFs.\n• Screener & Benchmarking: Side-by-side asset comparisons and real-time watchlists.",
+      "A full-stack financial terminal for analyzing stocks, ETFs, and portfolios. Automated ETL pipelines (Python, PostgreSQL) scrape holdings data across 33 ETF issuers weekly and keep market data fresh via Yahoo Finance daily. The terminal covers fundamentals, financial statements, a 3-pillar risk model (solvency, valuation, volatility), and ETF look-through down to individual holdings — plus portfolio analytics with real-time valuation and sector breakdowns, an LLM-generated market briefing via Groq, and a Walter Bloomberg live feed streamed over SSE from Telegram.",
     "cv.title": "CV / Resume",
     "cv.profileTitle": "Profile",
     "cv.profileDesc": "[ Add your personal profile / introduction here ]",
@@ -90,7 +90,7 @@ export const ui = {
       "Eine App, die ich gebaut habe um Sets und Workouts zu tracken.",
     "project.nexusfinance.badge": "Finanzen",
     "project.nexusfinance.desc":
-      "Full-Stack-Finanzterminal zur professionellen Analyse von Aktien, ETFs und individuellen Portfolios.\n\n• Automatisierte Data-Pipelines: Wöchentliches ETL-Scraping von ETF-Holdings (20+ Provider & justETF) sowie tägliche Marktdaten-Updates via Yahoo Finance mit Python-Cronjobs & PostgreSQL.\n• Tiefenanalyse & Look-Through: Detailseiten mit interaktiven Preischarts, Finanzkennzahlen, Bewertungen, Risikometriken und ETF-Inclusion-Tracking (welche ETFs halten eine Aktie).\n• Portfolio-Engine & ETF-Synthese: Live-Berechnung gewichteter Bewertungen, Wachstums- und Sektor-Verteilungen sowie algorithmische Replikation des Portfolios über passende ETFs.\n• Screener & Benchmark: Multi-Asset-Vergleichsseiten und Watchlists für fundierte Investment-Entscheidungen.",
+      "Full-Stack-Finanzterminal zur Analyse von Aktien, ETFs und eigenen Portfolios. Automatisierte ETL-Pipelines (Python, PostgreSQL) scrapen wöchentlich die Holdings von 33 ETF-Anbietern und halten Marktdaten über Yahoo Finance täglich aktuell. Das Terminal deckt Fundamentaldaten, Finanzberichte, ein quantitatives 3-Säulen-Risikomodell und ETF-Look-Through bis auf Einzeltitelebene ab — dazu Portfolio-Analysen mit Echtzeit-Bewertungen und Sektor-/Länderverteilungen, ein per Groq generiertes Marktbriefing und einen Walter-Bloomberg-Live-Feed per SSE aus Telegram.",
 
     "cv.title": "Lebenslauf",
     "cv.profileTitle": "Profil",
