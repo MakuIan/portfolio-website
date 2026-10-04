@@ -35,9 +35,12 @@ export const ui = {
     "project.setpoint.badge": "Fitness",
     "project.setpoint.desc":
       "An app I built to track sets and workouts.",
+    "project.dkseminargif.badge": "Education",
+    "project.dkseminargif.desc":
+      "An interactive web tool that visualizes the LZW compression algorithm in the context of the GIF format. Upload an image, inspect its pixel grid and color table, then follow the lossless compression and decompression process step by step.",
     "project.nexusfinance.badge": "Finance",
     "project.nexusfinance.desc":
-      "A full-stack financial terminal for analyzing stocks, ETFs, and portfolios. Automated ETL pipelines (Python, PostgreSQL) scrape holdings data across 33 ETF issuers weekly and keep market data fresh via Yahoo Finance daily. The terminal covers fundamentals, financial statements, a 3-pillar risk model (solvency, valuation, volatility), and ETF look-through down to individual holdings — plus portfolio analytics with real-time valuation and sector breakdowns, an LLM-generated market briefing via Groq, and a Walter Bloomberg live feed streamed over SSE from Telegram.",
+      "A full-stack financial terminal for analyzing stocks, ETFs, and portfolios. Automated ETL pipelines (Python, PostgreSQL) scrape holdings data across 33 ETF issuers weekly and keep market data fresh via Yahoo Finance daily. The terminal covers fundamentals, financial statements, risk analytics with volatility and diversification scores, macroeconomic indicators such as CPI, interest rates, and labor-market data, and ETF look-through down to individual holdings — plus portfolio analytics with real-time valuation and sector breakdowns, an LLM-generated market briefing via Groq, and a Walter Bloomberg live feed streamed over SSE from Telegram.",
     "cv.title": "CV / Resume",
     "cv.profileTitle": "Profile",
     "cv.profileDesc": "[ Add your personal profile / introduction here ]",
@@ -47,6 +50,10 @@ export const ui = {
     "cv.educationDesc": "[ Add your educational background here ]",
     "cv.skillsTitle": "Skills",
     "cv.skillsDesc": "",
+    "cv.skills.languages": "Programming Languages",
+    "cv.skills.frameworks": "Frameworks",
+    "cv.skills.databases": "Databases",
+    "cv.skills.other": "Other",
     "cv.certificationsTitle": "Certifications",
     "cv.certificationsDesc": "[ Add your certifications here ]",
 
@@ -88,9 +95,12 @@ export const ui = {
     "project.setpoint.badge": "Fitness",
     "project.setpoint.desc":
       "Eine App, die ich gebaut habe um Sets und Workouts zu tracken.",
+    "project.dkseminargif.badge": "Bildung",
+    "project.dkseminargif.desc":
+      "Ein interaktives Webtool, das den LZW-Kompressionsalgorithmus im Kontext des GIF-Formats visualisiert. Bilder können hochgeladen, ihr Pixelraster und ihre Farbtabelle analysiert und der verlustfreie Kompressions- und Dekompressionsprozess Schritt für Schritt nachvollzogen werden.",
     "project.nexusfinance.badge": "Finanzen",
     "project.nexusfinance.desc":
-      "Full-Stack-Finanzterminal zur Analyse von Aktien, ETFs und eigenen Portfolios. Automatisierte ETL-Pipelines (Python, PostgreSQL) scrapen wöchentlich die Holdings von 33 ETF-Anbietern und halten Marktdaten über Yahoo Finance täglich aktuell. Das Terminal deckt Fundamentaldaten, Finanzberichte, ein quantitatives 3-Säulen-Risikomodell und ETF-Look-Through bis auf Einzeltitelebene ab — dazu Portfolio-Analysen mit Echtzeit-Bewertungen und Sektor-/Länderverteilungen, ein per Groq generiertes Marktbriefing und einen Walter-Bloomberg-Live-Feed per SSE aus Telegram.",
+      "Full-Stack-Finanzterminal zur Analyse von Aktien, ETFs und eigenen Portfolios. Automatisierte ETL-Pipelines (Python, PostgreSQL) scrapen wöchentlich die Holdings von 33 ETF-Anbietern und halten Marktdaten über Yahoo Finance täglich aktuell. Das Terminal deckt Fundamentaldaten, Finanzberichte, Risikoanalysen mit Volatilitäts- und Diversifikationsscores, makroökonomische Indikatoren wie CPI, Zinsen und Arbeitsmarktdaten sowie ETF-Look-Through bis auf Einzeltitelebene ab — dazu Portfolio-Analysen mit Echtzeit-Bewertungen und Sektor-/Länderverteilungen, ein per Groq generiertes Marktbriefing und einen Walter-Bloomberg-Live-Feed per SSE aus Telegram.",
 
     "cv.title": "Lebenslauf",
     "cv.profileTitle": "Profil",
@@ -103,6 +113,10 @@ export const ui = {
     "cv.educationDesc": "[ Füge hier deine Ausbildung / dein Studium hinzu ]",
     "cv.skillsTitle": "Fähigkeiten",
     "cv.skillsDesc": "",
+    "cv.skills.languages": "Programmiersprachen",
+    "cv.skills.frameworks": "Frameworks",
+    "cv.skills.databases": "Datenbanken",
+    "cv.skills.other": "Sonstiges",
     "cv.certificationsTitle": "Zertifikate",
     "cv.certificationsDesc": "[ Füge hier deine Zertifikate hinzu ]",
 
